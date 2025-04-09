@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Error: You must provide exactly two parameters."
+    exit 1
+fi
+
+# 1st Parameter
+if [ -f "$1" ]; then
+    echo "File '$1' exists in the current directory."
+else
+    echo "File '$1' does not exist in the current directory."
+fi
+
+# 2nd Parameter
+if [ -d "$2" ]; then
+    echo "Directory '$2' exists in the current directory."
+else
+    echo "Directory '$2' does not exist in the current directory."
+fi
+
